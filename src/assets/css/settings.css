@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+ --green: #99b898;
+ --real-green: #35b653;
+ --light-skin: #FECEA8;
+ --real-grey: #b8c0c9;
+ --blue: #4C82DE;
+ --light-blue: #A4D0F7;
+ --pink: #ff847C;
+ --red: #E84A5F;
+ --dark: #2A3638;
+ --shadow: rgba(42, 54, 56, 0.1);
+ --grey: rgba(255, 255, 255, 0.8);
+ --white: #ffffff;
+ --off-white: #f8f9fa;
+ --shadow2: #dddedf;
+}
+
+* {
+     font-family: 'Poppins', sans-serif;
+     margin: 0;
+     padding: 0;
+     color: var(--dark);
+     text-decoration: none;
+}
+
+body {
+     background-color: var(--off-white);
+}
+.navbar {
+     display: flex;
+     justify-content: space-evenly;
+     padding: 10px;
+     font-size: 20px;
+}
+
+.navfront a {
+     margin-top: 8px;
+     display: flex;
+     font-weight: 700;
+}
+
+.navfront i {
+     
+     margin-top: 4px;
+     margin-right: 5px;
+}
+
+.navback {
+     display: flex;
+}
+
+.navback ul {
+     display: flex;
+     font-size: 15px;
+     margin-top: 4px;
+}
+
+.navback li {
+margin-top: 8px;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+
+.disable {
+     display: none;
+     pointer-events: none;
+}
+
+.show-block {
+     display: block;
+}
+
+.user-dropdown {
+     display: flex;
+     flex-direction: column;
+}
+
+
+.user-img img {
+     height: 40px;
+     border-radius: 50%;
+     margin-left: 45px;
+}
+
+
+.user-img ul {
+     display: flex;
+     font-size: 15px;
+     margin-top: 4px;
+}
+
+.user-img li {
+     margin-top: 8px;
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+.dropdown-content {
+     z-index: 2;
+     position: absolute;
+     margin-top: 50px;
+}
+
+.dropdown-content ul {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     background-color: white;
+     list-style-type: none;
+     font-size: 15px;
+     border-radius: 5px;
+     font-weight: 500;
+}
+
+
+.hidden-drop {
+     display: none;
+}
+
+.dropdown-content li {
+     background-color: white;
+     padding: 10px;
+     border-top: 1px solid var(--shadow);
+     transition: background-color 0.2s linear;
+}
+
+.dropdown-content li:nth-child(1), .dropdown-content li:nth-child(3) {
+     border-radius: 5px;
+}
+
+.dropdown-content li:hover {
+     background-color: var(--shadow);
+}
+.dropdown-content a {
+     color: var(--dark);
+}
+
+.logout {
+     color: var(--red) !important;
+}
+
+.main {
+     margin-top: 100px;
+     background-color: var(--white);
+     height: 130px;
+     width: 500px;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 20px;
+     box-shadow: 0 5px 15px var(--shadow2);
+}
+
+.user-info {
+     display: flex;
+     padding: 20px;
+}
+.user-info img {
+ height: 85px;
+ border-radius: 50%;
+}
+
+.user-info p {
+     display: flex;
+     margin-top: 19px;
+     margin-left: 30px;
+}
+
+
+.user-info span {
+     margin-top: 40px;
+     z-index: 1;
+     position: absolute;
+     margin-left: 115px;
+}
+
+
+.prem-true {
+     color: var(--real-green) !important;
+}
+
+.prem-false {
+     color: var(--real-grey) !important;
+}
+
+
+.user-settings {
+     margin-top: 50px;
+     background-color: var(--white);
+     height: 500px;
+     width: 500px;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 20px;
+     box-shadow: 0 5px 15px var(--shadow2);
+}
+
+.user-settings form {
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     width: 400px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.user-settings form label {
+     margin-top: 30px;
+     font-size: 20px;
+     font-weight: 600;
+}
+
+.user-settings form label span {
+     margin-top: 30px;
+     font-size: 15px;
+     font-weight: 400;
+}
+
+
+.user-settings form input {
+     border: 1px solid var(--shadow2);
+     border-radius: 5px;
+     padding: 5px;
+}
+
+.user-settings form input:focus {
+     border: 1px solid var(--shadow2);
+     border-radius: 5px;
+     padding: 5px;
+}
+
+.user-settings form select {
+     border: 1px solid var(--shadow2);
+     border-radius: 5px;
+}
+
+
+.user-settings form button {
+     margin-top: 150px;
+     background-color: var(--real-green);
+     color: white;
+     border: none;
+     border-radius: 5px;
+     width: 70px;
+     font-size: 15px;
+     padding: 10px;
+}

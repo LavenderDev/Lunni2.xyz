@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../assets/css/profile.css">
+     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="icon" href="../assets/img/Icon (8).png">
+     <meta property="og:title" content="Lunno" />
+     <meta property="og:type" content="website" />
+     <meta property="og:url" content="https://lunni.xyz" />
+     <meta property="og:image" content="https://cdn.discordapp.com/attachments/882307894207463494/882323115793866833/Icon_8.png" />
+     <meta property="og:description" content="A place where things get done and done correctly. Discord bots, npm packages, apis and more." />
+     <meta name="theme-color" content="#E84A5F">
+     <script src="https://kit.fontawesome.com/6673ce01c2.js" crossorigin="anonymous"></script>
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <title>Lunni | Profile</title>
+</head>
+<body>
+     <div class="navbar">
+
+          <div class="navfront">
+               <i class='bx bx-moon'></i>
+               <p>Lunni</p>
+          </div>
+
+          <div class="navback">
+               <ul>
+                    <li>  <a href="/" class="">Home</a>  </li>
+                    <li>  <a href="/support" class="">Support</a>  </li>
+               </ul>
+               
+          </div>
+          <div class="user-dropdown">
+               <div class="user-img">
+                    <!--<ul>
+                         <li> <a href="/login">Login</a></li>
+                    </ul>-->
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="" id="userImage">
+               </div>
+               <div class="dropdown-content hidden-drop" id="dropdown_content">
+                    <ul>
+                         <li> <a href="/settings">Settings</a> </li>
+          
+                         <li> <a href="/logout" class="logout">Logout</a> </li>
+                    </ul>
+               </div>
+          </div>
+     </div>
+     
+     <div class="main">
+              <div class="mainSection" data-aos="fade-up">
+                    <div class="top">
+                    <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="" draggable="false">
+                    <p>Lavender <span>#0069</span></p>
+               </div>
+               <div class="bottom">
+                    <p class="header">
+                         <i class="fas fa-pen-alt"></i>
+                         About</p>
+                    <p>Desc here</p>
+                    <button id="seeMoreButton">See More</button>
+               </div>
+              </div>
+               <div class="seeMoreSection" id="seeMoreSection" data-aos="fade-up">
+                    <div class="flex">
+                         <div class="flexcol">
+                              <div class="header">
+                                   <i class="fas fa-venus-mars"></i>
+                                   <p>Nickname</p>
+                              </div>
+                         <p>Name</p>
+                         </div>
+                         <div class="flexcol">
+                              <div class="header">
+                                   <i class="fas fa-venus-mars"></i>
+                                   <p>Pronouns</p>
+                              </div>
+                         <p>Pronouns here</p>
+                         </div>
+                    </div>
+               </div>
+     </div>
+</body>
+<script>
+     const userImg = document.querySelector("#userImage")
+     const dropContent = document.querySelector("#dropdown_content")
+
+     userImg.addEventListener("click", () => {
+          dropContent.classList.toggle("hidden-drop")
+     })
+
+
+     const seeMoreButton = document.querySelector("#seeMoreButton") 
+     const seeMoreSection = document.querySelector("#seeMoreSection") 
+
+     seeMoreButton.addEventListener('click', () => {
+          seeMoreSection.classList.toggle("hidden-content")
+     })     
+</script>
+<script>
+     AOS.init();
+   </script>
+</html>

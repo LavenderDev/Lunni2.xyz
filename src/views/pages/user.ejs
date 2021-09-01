@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/settings.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/img/Icon (8).png" />
+    <meta property="og:title" content="Lunno" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lunni.xyz" />
+    <meta
+      property="og:image"
+      content="https://cdn.discordapp.com/attachments/882307894207463494/882323115793866833/Icon_8.png"
+    />
+    <meta
+      property="og:description"
+      content="A place where things get done and done correctly. Discord bots, npm packages, apis and more."
+    />
+    <meta name="theme-color" content="#E84A5F" />
+    <title>Lunni | User Settings</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navfront" >
+        <a href="/">
+        <i class="bx bx-moon"></i>
+        <p>Lunni</p>
+      </a>
+      </div>
+
+      <div class="navback">
+        <ul>
+          <li><a href="/" class="">Home</a></li>
+          <li><a href="/support" class="">Support</a></li>
+        </ul>
+      </div>
+      <div class="user-dropdown">
+        <div class="user-img">
+          <img src="<%=user.avatarUrl({size: 64})%>" alt="" id="userImage" />
+        </div>
+        <div class="dropdown-content hidden-drop" id="dropdown_content">
+          <ul>
+            <li><a href="/me">Settings</a></li>
+
+            <li><a href="/logout" class="logout">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="main" data-aos="fade-up">
+      <div class="user-info">
+        <img src="<%=user.avatarUrl()%>" alt="" draggable="false" />
+        <p><%= user.tag %></span></p>
+        <% if(premiumUser) { %>
+        <span class="prem-true">Premium Member</span>
+        <% } else { %>
+        <span class="prem-false">Premium Member</span>
+        <% } %>
+      </div>
+    </div>
+    <div class="user-settings" data-aos="fade-up">
+      <form action="me/settings?_method=PUT" method="post">
+        <label for="">Nickname.</label>
+        <input
+          type="text"
+          id="nicknameInput"
+          name="userNickname"
+          value="<%=nickname%>"
+        />
+        <label for="">Description.</label>
+        <input
+          type="text"
+          id="nicknameInput"
+          name="userDesc"
+          value="<%=desc%>"
+        />
+        <label for=""
+          >Pronouns. <span>Current Pronouns: <%=pronoun%></span></label
+        >
+        <select name="userPronouns" id="">
+          <option value="Unknown">Unknown</option>
+          <option value="He/Him">He/Him</option>
+          <option value="She/Her">She/Her</option>
+          <option value="They/Them">They/Them</option>
+          <option value="It/Its">It/Its</option>
+          <option value="He/They">He/They</option>
+          <option value="She/They">She/They</option>
+          <option value="Neo Pronouns">Neo Pronouns</option>
+          <option value="Other">Other</option>
+        </select>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </body>
+  <script>
+    const userImg = document.querySelector("#userImage");
+    const dropContent = document.querySelector("#dropdown_content");
+
+    userImg.addEventListener("click", () => {
+      dropContent.classList.toggle("hidden-drop");
+    });
+  </script>
+</html>
